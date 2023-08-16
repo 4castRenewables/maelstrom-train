@@ -32,5 +32,5 @@ Environment:
 
 2. Run your experiment with mantik
 ```
-mantik runs submit <absolute path to maelstrom-train/mlproject directory> --backend-config unicore-config-venv.yaml --entry-point main --experiment-id 69 -v
+mantik runs submit <absolute path to maelstrom-train/mlproject directory> --backend-config unicore-config-venv.yaml --entry-point main --experiment-id <experiment ID> -v
 ```
