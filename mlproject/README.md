@@ -1,4 +1,4 @@
-In juwelsbooster
+### In juwelsbooster
 1. Set python to version 3.9. For this load the following modules:
 ```
 ml --force purge
@@ -19,9 +19,12 @@ source <venv-name>/bin/activate
 pip install -r maelstrom-train/benchmark/requirements_wo_modules.txt
 ```
 
+### In mantik
 
-<br>
-In your local mlproject
+Set up a project in Mantik to enable the execution of your experiment. For a step-by-step guide, refer to the quickstart tutorial available [here](https://mantik-ai.gitlab.io/mantik/ui/quickstart.html)
+
+
+### In your local mlproject
 
 1. Set `Python` in `unicore-config-venv.yaml` to the path of your virtual enviroment
 
