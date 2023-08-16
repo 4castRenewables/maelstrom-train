@@ -25,12 +25,12 @@ entry_points:
         type: int
         default: 3
     command: >
-      python3 -u benchmark.py \
-        {datadir}/{datasize}/202???01T*.nc \
-        -m {mode} \
-        -b {batch_size} \
-        -p {patch_size} \
-        -j {num_parallel_calls} \
-        -e {nepochs} \
-        -val {datadir}/{datasize}/20200615T*.nc \
+      python3 -u benchmark.py 
+        {datadir}/{datasize}/202???01T*.nc 
+        -m {mode} 
+        -b {batch_size} 
+        -p {patch_size} 
+        -j {num_parallel_calls} 
+        -e {nepochs} 
+        -val {datadir}/{datasize}/20200615T*.nc 
         --norm {datadir}/normalization.yml
