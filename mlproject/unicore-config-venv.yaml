@@ -11,7 +11,6 @@ Environment:
 Resources:
   Queue: devel
   Nodes: 1
-  Project: deepacf
 Exclude:
   - "*.sif"
   - "figures"
