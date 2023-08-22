@@ -2,8 +2,6 @@ import argparse
 import collections
 import glob
 import math
-import os
-print(os.system("pip list -v"))
 import numpy as np
 import psutil
 import resource
