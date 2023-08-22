@@ -26,12 +26,14 @@ Set up a project in Mantik to enable the execution of your experiment. For a ste
 
 ### In your local mlproject
 
-1. Set `Python` in `unicore-config-venv.yaml` to the path of your virtual enviroment
+1. Set `PreRunCommand` in `unicore-config-venv.yaml` to the path of your virtual enviroment
 
-```
-Environment:
-  Python: /path/to/<venv-name>
-```
+<pre><code> PreRunCommand:
+    Command: >
+      module load Stages/2022 GCCcore/.11.2.0 NCCL/2.11.4-CUDA-11.5 Python/3.9.6;
+      source <b>/path/to/&lt;venv-name&gt;</b>/bin/activate;
+</code></pre>
+
 
 2. Run your experiment with mantik
 ```
