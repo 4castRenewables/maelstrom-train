@@ -1,4 +1,4 @@
-## Running Application 4 with Mantik CLI
+## Running Application 1 with Mantik CLI
 To run this application in juwels-booster with the mantik CLI follow these instructions:
 
 1. Login to juwels-booster via SSH. To access juwels-booster via SSH, please follow the instructions provided in this [tutorial](https://apps.fz-juelich.de/jsc/hps/juwels/access.html#ssh-login)
