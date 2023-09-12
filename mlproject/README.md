@@ -1,5 +1,9 @@
-### In juwelsbooster
-1. Set python to version 3.9. For this load the following modules:
+## Running Application 4 with Mantik CLI
+To run this application in juwels-booster with the mantik CLI follow these instructions:
+
+1. Login to juwels-booster via SSH. To access juwels-booster via SSH, please follow the instructions provided in this [tutorial](https://apps.fz-juelich.de/jsc/hps/juwels/access.html#ssh-login)
+
+2. Once you are logged in on juwels-booster, set python to version 3.9. For this load the following modules:
 ```
 ml --force purge
 ml use $OTHERSTAGES
@@ -8,25 +12,20 @@ ml GCCcore/.11.2.0
 ml Python/3.9.6
 ```
 
-2. Create a virtual enviroment and activate it:
+3. Create a virtual environment and activate it:
 ```
 python -m venv <venv-name>
 source <venv-name>/bin/activate
 ```
 
-3. Install ap1 dependencies with pip. The requirements file is in the `env_setup` file
+4. Install ap1 dependencies with pip. The requirements file is in the `env_setup` file
 ```
 pip install -r maelstrom-train/benchmark/requirements_wo_modules.txt
 ```
 
-### In mantik
+5. The results will be logged to an Experiment on the MLflow tracking server on Mantik. Set up a project in Mantik and create a new Experiment. Note its experiment Id, which will be needed in the submission command. For a step-by-step guide, refer to the Quickstart tutorial available [here](https://mantik-ai.gitlab.io/mantik/ui/quickstart.html).
 
-Set up a project in Mantik to enable the execution of your experiment. For a step-by-step guide, refer to the quickstart tutorial available [here](https://mantik-ai.gitlab.io/mantik/ui/quickstart.html)
-
-
-### In your local mlproject
-
-1. Set `PreRunCommand` in `unicore-config-venv.yaml` to the path of your virtual enviroment
+6. Update the `unicore-config-venv.yaml` file by specifying the `PreRunCommand` with the path to your virtual environment.
 
 <pre><code> PreRunCommand:
     Command: >
@@ -35,7 +34,7 @@ Set up a project in Mantik to enable the execution of your experiment. For a ste
 </code></pre>
 
 
-2. Run your experiment with mantik
+7. Run your experiment with mantik
 ```
 mantik runs submit <absolute path to maelstrom-train/mlproject directory> --backend-config unicore-config-venv.yaml --entry-point main --experiment-id <experiment ID> -v
 ```
