@@ -2,8 +2,8 @@ import argparse
 import collections
 import glob
 import math
-import numpy as np
 import os
+import numpy as np
 import psutil
 import resource
 import time
