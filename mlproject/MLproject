@@ -3,12 +3,9 @@ name: ap1
 entry_points:
   main:
     parameters:
-      datadir:
+      datadirpattern:
         type: string
-        default: /p/scratch/deepacf/maelstrom/maelstrom_data/ap1/air_temperature
-      datasize:
-        type: string
-        default: 5GB
+        default: /p/scratch/deepacf/maelstrom/maelstrom_data/ap1/air_temperature/5TB/20200301T*.nc 
       mode:
         type: string
         default: train
@@ -26,7 +23,7 @@ entry_points:
         default: 3
     command: >
       python3 -u benchmark.py 
-        {datadir}/{datasize}/202???01T*.nc 
+        {datadirpattern}
         -m {mode} 
         -b {batch_size} 
         -p {patch_size} 
