@@ -6,7 +6,7 @@ Modules:
  - Python/3.9.6;
 Environment:
   Python:
-      Path: /p/project/deepacf/maelstrom/grau1/ap1/bin/activate;
+      Path: /p/project/deepacf/maelstrom/grau1/ap1
   Variables:
     GIT_PYTHON_REFRESH: quiet
 Resources:
