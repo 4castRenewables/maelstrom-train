@@ -25,7 +25,7 @@ pip install -r maelstrom-train/benchmark/requirements_wo_modules.txt
 
 5. The results will be logged to an Experiment on the MLflow tracking server on Mantik. Set up a project in Mantik and create a new Experiment. Note its experiment Id, which will be needed in the submission command. For a step-by-step guide, refer to the Quickstart tutorial available [here](https://mantik-ai.gitlab.io/mantik/ui/quickstart.html).
 
-6. Update the `unicore-config-venv.yaml` file by specifying the `PreRunCommand` with the path to your virtual environment.
+6. Update the `unicore-config-venv.yaml` file by specifying the `PreRunCommandOnComputeNode` with the path to your virtual environment.
 
 <pre><code> PreRunCommandOnComputeNode: >
       module load Stages/2022 GCCcore/.11.2.0 NCCL/2.11.4-CUDA-11.5 Python/3.9.6;
