@@ -1,20 +1,15 @@
 UnicoreApiUrl: https://zam2125.zam.kfa-juelich.de:9112/JUWELS/rest/core
+Exclude:
+  - '*.sif'
+  - figures
+  - saved_model
+  - README.md
+Resources:
+  Nodes: 1
+  Queue: develbooster
 Environment:
-  Python:
-      Path: /p/project/deepacf/maelstrom/grau1/ap1
-  Modules:
-    - Stages/2022 
-    - GCCcore/.11.2.0 
-    - NCCL/2.11.4-CUDA-11.5 
-    - Python/3.9.6
   Variables:
     GIT_PYTHON_REFRESH: quiet
-Resources:
-  Queue: devel
-  Nodes: 1
-Exclude:
-  - "*.sif"
-  - "figures"
-  - "saved_model"
-  - README.md
-
+  PreRunCommandOnComputeNode: >
+    module load Stages/2022 GCCcore/.11.2.0 NCCL/2.11.4-CUDA-11.5 Python/3.9.6;
+    source /p/project/deepacf/maelstrom/grau1/ap1_env/bin/activate
